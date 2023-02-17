@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <Version>1.0</Version>
+    <Title>RhinoCGAL</Title>
+    <Description>Description of RhinoCGAL</Description>
+    <TargetExt>.rhp</TargetExt>
+    <UseWpf>true</UseWpf>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <ApplicationIcon />
+    <Win32Resource />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedResources\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CGAL.Wrapper\CGAL.Wrapper.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="CGALDotNet">
+      <HintPath>..\ExternalDependency\CGALDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="CGALDotNetGeometry">
+      <HintPath>..\ExternalDependency\CGALDotNetGeometry.dll</HintPath>
+    </Reference>
+    <Reference Include="RhinoCommon">
+      <HintPath>C:\Program Files\Rhino 7\System\RhinoCommon.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  
+  <PropertyGroup Condition="$(Configuration) == 'Debug' AND $([MSBuild]::IsOSPlatform(Windows))">
+    <StartProgram>C:\Program Files\Rhino 7\System\Rhino.exe</StartProgram>
+    <StartArguments></StartArguments>
+    <StartAction>Program</StartAction>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="XCOPY &quot;$(SolutionDir)deps\$(Configuration)&quot; &quot;$(TargetDir)&quot; /S /Y&#xD;&#xA;&#xD;&#xA;XCOPY &quot;$(SolutionDir)ExternalDependency\&quot; &quot;$(TargetDir)&quot; /S /Y" />
+  </Target>
+  
+</Project>

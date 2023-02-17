@@ -1,0 +1,10 @@
+E:\Downloads\RhinoDev\RhinoCGAL\CGAL.Wrapper\bin\Debug\CGAL.Wrapper.dll
+E:\Downloads\RhinoDev\RhinoCGAL\CGAL.Wrapper\bin\Debug\CGAL.Wrapper.pdb
+E:\Downloads\RhinoDev\RhinoCGAL\CGAL.Wrapper\obj\Debug\CGAL.Wrapper.csproj.CoreCompileInputs.cache
+E:\Downloads\RhinoDev\RhinoCGAL\CGAL.Wrapper\obj\Debug\CGAL.Wrapper.dll
+E:\Downloads\RhinoDev\RhinoCGAL\CGAL.Wrapper\obj\Debug\CGAL.Wrapper.pdb
+E:\GitHub\RhinoStraightSkeleton\CGAL.Wrapper\bin\Debug\CGAL.Wrapper.dll
+E:\GitHub\RhinoStraightSkeleton\CGAL.Wrapper\bin\Debug\CGAL.Wrapper.pdb
+E:\GitHub\RhinoStraightSkeleton\CGAL.Wrapper\obj\Debug\CGAL.Wrapper.csproj.CoreCompileInputs.cache
+E:\GitHub\RhinoStraightSkeleton\CGAL.Wrapper\obj\Debug\CGAL.Wrapper.dll
+E:\GitHub\RhinoStraightSkeleton\CGAL.Wrapper\obj\Debug\CGAL.Wrapper.pdb

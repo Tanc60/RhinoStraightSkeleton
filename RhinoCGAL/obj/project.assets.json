@@ -1,0 +1,79 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.8": {
+      "CGAL.Wrapper/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/CGAL.Wrapper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CGAL.Wrapper.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CGAL.Wrapper/1.0.0": {
+      "type": "project",
+      "path": "../CGAL.Wrapper/CGAL.Wrapper.csproj",
+      "msbuildProject": "../CGAL.Wrapper/CGAL.Wrapper.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.8": [
+      "CGAL.Wrapper >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Qiang\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\GitHub\\RhinoStraightSkeleton\\RhinoCGAL\\RhinoCGAL.csproj",
+      "projectName": "RhinoCGAL",
+      "projectPath": "E:\\GitHub\\RhinoStraightSkeleton\\RhinoCGAL\\RhinoCGAL.csproj",
+      "packagesPath": "C:\\Users\\Qiang\\.nuget\\packages\\",
+      "outputPath": "E:\\GitHub\\RhinoStraightSkeleton\\RhinoCGAL\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Qiang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net48"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "projectReferences": {
+            "E:\\GitHub\\RhinoStraightSkeleton\\CGAL.Wrapper\\CGAL.Wrapper.csproj": {
+              "projectPath": "E:\\GitHub\\RhinoStraightSkeleton\\CGAL.Wrapper\\CGAL.Wrapper.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net48": {
+        "targetAlias": "net48",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

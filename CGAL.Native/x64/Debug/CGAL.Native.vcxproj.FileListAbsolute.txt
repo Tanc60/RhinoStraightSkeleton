@@ -1,0 +1,2 @@
+E:\Downloads\RhinoDev\RhinoCGAL\CGAL.Native\x64\Debug\CGAL.Native.vcxproj.CopyComplete
+E:\GitHub\RhinoStraightSkeleton\CGAL.Native\x64\Debug\CGAL.Native.vcxproj.CopyComplete

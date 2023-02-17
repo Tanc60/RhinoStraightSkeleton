@@ -1,0 +1,9 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  pch.cpp
+  CGAL.Native.cpp
+  CGAL.Native.Functions.cpp
+C:\dev\vcpkg\installed\x64-windows\include\boost\random\mixmax.hpp(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+C:\dev\vcpkg\installed\x64-windows\include\boost\random\detail\mixmax_skip_N17.ipp(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  Generating Code...
+     Creating library E:\GitHub\RhinoStraightSkeleton\deps\Debug\CGAL.Native.lib and object E:\GitHub\RhinoStraightSkeleton\deps\Debug\CGAL.Native.exp
+  CGAL.Native.vcxproj -> E:\GitHub\RhinoStraightSkeleton\deps\Debug\CGAL.Native.dll
