@@ -20,10 +20,10 @@ https://github.com/Scrawk/CGALDotNet.git
 <p>This command can generate mesh from discrete 2D skeleton segment, meshes are colored differently.</p>
 <p>
   <img src="https://github.com/Tanc60/RhinoStraightSkeleton/blob/main/picture/demo13.png?raw=true" width="200">
-  ---
+  --->
   <img src="https://github.com/Tanc60/RhinoStraightSkeleton/blob/main/picture/demo10.png?raw=true" width="200">
-  ---
+  --->
   <img src="https://github.com/Tanc60/RhinoStraightSkeleton/blob/main/picture/demo11.png?raw=true" width="200">
-  ---
+  --->
   <img src="https://github.com/Tanc60/RhinoStraightSkeleton/blob/main/picture/demo12.png?raw=true" width="200">
 </p>
