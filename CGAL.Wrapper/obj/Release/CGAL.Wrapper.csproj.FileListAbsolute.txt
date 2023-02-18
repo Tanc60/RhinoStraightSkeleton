@@ -1,6 +1,5 @@
 E:\GitHub\RhinoStraightSkeleton\CGAL.Wrapper\bin\Release\CGAL.Wrapper.dll
 E:\GitHub\RhinoStraightSkeleton\CGAL.Wrapper\bin\Release\CGAL.Wrapper.pdb
-E:\GitHub\RhinoStraightSkeleton\CGAL.Wrapper\obj\Release\CGAL.Wrapper.csproj.AssemblyReference.cache
 E:\GitHub\RhinoStraightSkeleton\CGAL.Wrapper\obj\Release\CGAL.Wrapper.csproj.CoreCompileInputs.cache
 E:\GitHub\RhinoStraightSkeleton\CGAL.Wrapper\obj\Release\CGAL.Wrapper.dll
 E:\GitHub\RhinoStraightSkeleton\CGAL.Wrapper\obj\Release\CGAL.Wrapper.pdb

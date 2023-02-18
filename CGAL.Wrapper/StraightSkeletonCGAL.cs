@@ -153,7 +153,15 @@ namespace CGAL.Wrapper
                 }
             }
         }
-
+        /// <summary>
+        /// extract result from C++ to .Net
+        /// </summary>
+        /// <param name="outer"></param>
+        /// <param name="holes"></param>
+        /// <param name="skeletonResult"></param>
+        /// <param name="spokesResult"></param>
+        /// <param name="handle"></param>
+        /// <returns></returns>
         private static unsafe StraightSkeleton ExtractResult(IReadOnlyList<Vector2> outer, IReadOnlyList<IReadOnlyList<Vector2>> holes, Poly* skeletonResult, Poly* spokesResult, IntPtr handle)
         {
             //Set of all vertices supplied as input

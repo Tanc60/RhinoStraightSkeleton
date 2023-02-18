@@ -8,7 +8,7 @@ using Rhino.Input.Custom;
 using CGALDotNet;
 using CGALDotNet.Arrangements;
 using System.Collections.Generic;
-using CGALDotNet.Polygons;
+using RhinoCGAL.Utilities;
 
 namespace RhinoCGAL.Commands
 {
@@ -28,15 +28,15 @@ namespace RhinoCGAL.Commands
         {
             //get lines from selection
             GetObject getObject = new GetObject();
-            getObject.SetCommandPrompt("Please select 2d objects to create 2D arrangement");
-            getObject.GeometryFilter = ObjectType.AnyObject;
+            getObject.SetCommandPrompt("Please select 2d lines to create 2D arrangement");
+            getObject.GeometryFilter = ObjectType.Curve;
             getObject.GroupSelect = true;
             getObject.SubObjectSelect = true;
             getObject.EnableClearObjectsOnEntry(false);
 
             if (getObject.GetMultiple(1, 0) != GetResult.Object)
             {
-                RhinoApp.WriteLine("No line was selected.");
+                RhinoApp.WriteLine("No line is selected.");
                 return getObject.CommandResult();
             }
             ObjRef[] objRefs = getObject.Objects();
@@ -77,9 +77,11 @@ namespace RhinoCGAL.Commands
                 Point3d pt= new Point3d(vertex.Point.x, vertex.Point.y, 0);
                 //RhinoDoc.ActiveDoc.Objects.AddPoint(pt);
             }
-            
+
             //retrieve faces
+
             var faces = new ArrFace2[arr.FaceCount];
+            RhinoApp.WriteLine("Generating {0} faces as mesh...",arr.FaceCount);
             arr.GetFaces(faces, faces.Length);
             foreach (var face in faces)
             {
@@ -88,12 +90,38 @@ namespace RhinoCGAL.Commands
                 {
                     facePoints.Add(new Point3d(vertex.Point.x, vertex.Point.y, 0));
                 }
-                facePoints.Add(facePoints[0]);//make closed polyline
+
+                //make closed polyline
+                facePoints.Add(facePoints[0]);
                 var pL=new Polyline(facePoints);
-                RhinoDoc.ActiveDoc.Objects.AddPolyline(pL);
+
+                //create mesh from polygon
+                var meshFace = Mesh.CreateFromClosedPolyline(pL);
+
+                //set the color
+                ObjectAttributes meshAttribute = new ObjectAttributes();
+
+                meshAttribute.ColorSource = ObjectColorSource.ColorFromObject;
+
+                meshAttribute.ObjectColor = RandomColor.GetRandomColor();
+
+                //set the layer properties
+
+                //create layer
+                RhinoDoc.ActiveDoc.Layers.Add("2DArrangement", System.Drawing.Color.Black);
+                //set layer
+                meshAttribute.LayerIndex = doc.Layers.FindName("2DArrangement").Index;
+
+                
+
+                //add mesh to the active doc
+                RhinoDoc.ActiveDoc.Objects.AddMesh(meshFace, meshAttribute);
             }
-            //Brep.CreateEdgeSurface(pL);
+            
+
+
             return Result.Success;
         }
+
     }
 }
